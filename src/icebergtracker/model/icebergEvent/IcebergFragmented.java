@@ -18,7 +18,7 @@ import java.util.List;
  * divir el iceberg que teniamos en 2, asi nos ahorramos borrar el que teníamos.
  */
 public class IcebergFragmented extends IcebergEvent{
-    List<Iceberg> icebergs = new ArrayList<>();
+    private final List<Iceberg> icebergs = new ArrayList<>();
     
     //Añade los icebergs nuevos por la fragmentacion con
     public IcebergFragmented(String[] icebergs,  LocalDate date, Iceberg iceberg) {
@@ -42,6 +42,10 @@ public class IcebergFragmented extends IcebergEvent{
             salida = salida + ", " + iceberg.getId();
         }
        return salida.substring(1);
+    }
+
+    public List<Iceberg> getIcebergs() {
+        return icebergs;
     }
     
     

@@ -15,8 +15,16 @@ import java.time.LocalDate;
 public abstract class IcebergEvent {
     protected LocalDate date;
     protected Iceberg iceberg;
-    
+
     //Printea todos los datos de ese evento
+    public abstract String devuelveDatos();
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public Iceberg getIceberg() {
+        return iceberg;
+    }
     
-    public abstract String devuelveDatos();  
 }
